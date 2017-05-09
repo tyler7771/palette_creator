@@ -1,6 +1,6 @@
 class Api::SessionController < ApplicationController
   def create
-    @user = User.find_by_credintials(
+    @user = User.find_by_credentials(
       params[:user][:username],
       params[:user][:password]
     )
@@ -11,7 +11,6 @@ class Api::SessionController < ApplicationController
       render :json => { :errors => ["Username not found"] }, :status => 404
     else
       sign_in(@user)
-      @stats = Rating.statistics({id: @user.id, type: "user"}, @user, "get")
       render './api/users/show'
     end
   end
