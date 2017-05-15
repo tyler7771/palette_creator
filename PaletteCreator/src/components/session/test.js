@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Actions } from 'react-native-router-flux';
 
 import {
   StyleSheet,
@@ -10,7 +11,7 @@ export default class HelloWorld extends Component {
   render() {
     return(
       <View style={{margin: 128}}>
-        <Text>
+        <Text onPress={Actions.pageOne}>
           Hello World!
         </Text>
       </View>

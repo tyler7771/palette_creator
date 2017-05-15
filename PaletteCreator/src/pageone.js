@@ -5,9 +5,8 @@ import { Actions } from 'react-native-router-flux';
 export default class PageOne extends Component {
   render() {
     return(
-      <View>
-        <Text style={styles.red}>this is pageone </Text>
-        <Text>asdasdasdasdasdasdsadasdsafsadsada </Text>
+      <View style={{margin: 128}}>
+        <Text> this is the next page PogChamp </Text>
       </View>
     )
   }

@@ -1,10 +1,15 @@
-import React from 'react';
+import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, LOGOUT } from '../actions/session_actions.js';
 import merge from 'lodash/merge';
 
+const defaultState = {
+    currentUser: null,
+    errors: []
+};
+
 const SessionReducer = (state = {}, action) => {
-  
   Object.freeze(state);
   let dup = merge({}, state);
+
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       dup.currentUser = action.currentUser;
@@ -20,6 +25,7 @@ const SessionReducer = (state = {}, action) => {
       return dup;
     default:
        return state;
+  };
 };
 
 export default SessionReducer;

@@ -1,6 +1,4 @@
 export const signup = (user) => {
-  let username = user.username;
-  let password = user.password;
 
   return fetch('api/users', {
     method: 'POST',
@@ -15,8 +13,6 @@ export const logout = () => {
 }
 
 export const login = (user) => {
-  let username = user.username;
-  let password = user.password;
 
   return fetch(`api/session/`, {
     method: 'POST',
