@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::PallettesControllerTest < ActionDispatch::IntegrationTest
+class PaletteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
