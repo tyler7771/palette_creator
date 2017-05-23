@@ -20,15 +20,13 @@ export default class ColorPicker extends Component {
   }
 
   _handleSlide(color){
-    return (value) => {
-      this.setState({ color: value });
-    }
+    return (value) => this.setState({ [color]: value });
   }
 
   render() {
     return(
       <View style={{flex:1}}>
-        <View style={styles.color}>
+        <View style={{flex: 1, backgroundColor:`rgb(${this.state.r}, ${this.state.g}, ${this.state.b})`}}>
         </View>
         <View style={styles.sliders}>
           <Slider onValueChange={this._handleSlide('r')}
@@ -50,10 +48,6 @@ export default class ColorPicker extends Component {
 }
 
 const styles = StyleSheet.create({
-  color: {
-    backgroundColor: 'blue',
-    flex: 2
-  },
 
   sliders: {
     flex: 1

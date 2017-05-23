@@ -3,6 +3,7 @@ import { Router, Scene } from 'react-native-router-flux';
 import PageOne from './pageone.js';
 import HelloWorld from './components/session/test.js';
 import ColorPickerContainer from './components/color/color_picker_container.js';
+import Icon from 'react-native-fa-icons';
 
 export default class App extends Component {
   render() {
@@ -11,7 +12,10 @@ export default class App extends Component {
         <Scene key="root">
           <Scene key="test" component={HelloWorld} title="testing" initial={true}/>
           <Scene key="pageOne" component={PageOne} title="test2"/>
-          <Scene key="colorPicker" component={ColorPickerContainer} hideNavBar={true}/>
+          <Scene key="colorPicker"
+                 component={ColorPickerContainer}
+                 title="Color Picker"
+                 renderRightButton={() => <Icon name="bars"/>}/>
         </Scene>
       </Router>
     )
