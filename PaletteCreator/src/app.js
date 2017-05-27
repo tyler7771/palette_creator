@@ -15,7 +15,8 @@ export default class App extends Component {
           <Scene key="colorPicker"
                  component={ColorPickerContainer}
                  title="Color Picker"
-                 renderRightButton={() => <Icon name="bars"/>}/>
+                 hideBackImage={true}
+                 renderRightButton={() => <Icon name="bars" style={{ fontSize:25 }}/>}/>
         </Scene>
       </Router>
     )
