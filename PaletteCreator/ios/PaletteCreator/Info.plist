@@ -6,8 +6,7 @@
 	<array>
 		<string>FontAwesome.ttf</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

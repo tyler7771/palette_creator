@@ -6,7 +6,7 @@ export default class PageOne extends Component {
   render() {
     return(
       <View style={{margin: 128}}>
-        <Text> this is the next page PogChamp </Text>
+        <Text onPress={Actions.colorPicker}> this is the next page PogChamp </Text>
       </View>
     )
   }
